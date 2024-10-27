@@ -1,29 +1,22 @@
+// Creating an automated data pipeline for Flughafens (AirportsData)
+pipeline FlughafensDataPipeline {
 
-// 1. Pipeline of Airports
-pipeline AirportsPipeline {
-
-    AirportsExtractor -> AirportsTextFileInterpreter;
-
-    AirportsTextFileInterpreter
-        -> AirportsCSVInterpreter 
-        -> AirportsTableInterpreter
-        -> AirportsLoader;
-
-    // 2. To fetch the CSV file
-    block AirportsExtractor oftype HttpExtractor {
+// To fetch the CSV file of FlughafensData
+    block FlughafensDataExtractor oftype HttpExtractor {
         url: "https://opendata.rhein-kreis-neuss.de/api/explore/v2.1/catalog/datasets/rhein-kreis-neuss-flughafen-weltweit/exports/csv?lang=en&timezone=Europe%2FBerlin&use_labels=true&delimiter=%3B";
+        
     }
+// To interpret the File as a Text File
+    block FlughafensDataTextFileInterpreter oftype TextFileInterpreter { }
 
-    // 3. To interpret the File as a Text File
-    block AirportsTextFileInterpreter oftype TextFileInterpreter { }
-
-    // 4. To interpret CSV input and output as a Sheet
-    block AirportsCSVInterpreter oftype CSVInterpreter {
+// To interpret CSV input and output as a Sheet
+    block FlughafensDataCSVInterpreter oftype CSVInterpreter {
         delimiter: ";";  // Ensure this is correct and supported
     }
 
-    // 5. To interpret a Sheet as a Table
-    block AirportsTableInterpreter oftype TableInterpreter {
+
+// To interpret a Sheet as a Table, by removing the columns: Zeitzone, DST, Zeitzonen-Datenbank, geo_punkt
+    block FlughafensDataTableInterpreter oftype TableInterpreter {
         header: true;
         columns: [
             "Lfd. Nummer" oftype integer,
@@ -35,12 +28,21 @@ pipeline AirportsPipeline {
             "Latitude" oftype decimal,
             "Longitude" oftype decimal,
             "Altitude" oftype integer
+            // The following columns are intentionally removed: "Zeitzone", "DST", "Zeitzonen-Datenbank", "geo_punkt"
         ];
     }
 
-    // 6. To generate the SQLite Database
-    block AirportsLoader oftype SQLiteLoader {
+// To generate the SQLite Database called “airports.sqlite”, in the table “airports”
+    block FlughafensDataLoader oftype SQLiteLoader {
         table: "airports";
         file: "airports.sqlite";
     }
+
+    FlughafensDataExtractor -> FlughafensDataTextFileInterpreter;
+
+    FlughafensDataTextFileInterpreter
+    -> FlughafensDataCSVInterpreter
+    -> FlughafensDataTableInterpreter 
+    -> FlughafensDataLoader;
+    
 }
