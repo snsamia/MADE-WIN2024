@@ -1,7 +1,7 @@
 # Methods of Advanced Data Engineering 
 # Jayvee Exercises (Exercise Badges)
 
-![](https://byob.yarr.is/snsamia/MADE-WIN2024/score_ex1) ![]
+![](https://byob.yarr.is/snsamia/MADE-WIN2024/score_ex1)![]
 This template project provides some structure for your open data project in the MADE module at FAU.
 This repository contains (a) a data science project that is developed by the student over the course of the semester, and (b) the exercises that are submitted over the course of the semester.
 
