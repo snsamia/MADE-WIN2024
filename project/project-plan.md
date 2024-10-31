@@ -35,7 +35,7 @@ This study aims to investigate the relationship between employment characteristi
 ## Work Packages
 
 ### 1. Preparation
-   - Define objectives, stakeholders, and tools for the analysis.
+   - Define objectives, and tools for the analysis.
    - Identify key stakeholders, such as policymakers, healthcare providers, and social services organizations.
 
 ### 2. Data Collection
