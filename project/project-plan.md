@@ -34,40 +34,12 @@ This study aims to investigate the relationship between employment characteristi
 
 ## Work Packages
 
-### 1. Preparation
-   - Define objectives, and tools for the analysis.
-   - Identify key stakeholders, such as policymakers, healthcare providers, and social services organizations.
-
-### 2. Data Collection
-   - Retrieve the datasets from the specified sources.
-   - Clean the data to handle missing values and standardize formats.
-   - Merge the datasets using common identifiers (e.g., Dwelling Unit ID).
-
-### 3. Exploratory Data Analysis (EDA)
-   - Analyze trends in demographic, job, and health characteristics.
-   - Visualize distributions and relationships between factors affecting food security.
-   - Identify patterns and anomalies in the data.
-
-### 4. Correlation Analysis
-   - Study relationships between variables, such as employment characteristics and food security indicators.
-   - Identify significant correlations between medical conditions and food security outcomes.
-
-### 5. Barrier Identification
-   - Research obstacles to improving food security in different demographic groups.
-   - Analyze the role of employment and health factors in contributing to these barriers.
-
-### 6. Strategies Proposal
-   - Suggest solutions to address key barriers identified.
-   - Prioritize strategies for policy interventions and social programs.
-
-### 7. Impact Assessment
-   - Evaluate the effectiveness of proposed solutions using the data.
-   - Estimate the potential benefits of targeted interventions for food security improvement.
-
-### 8. Reporting
-   - Compile findings and present recommendations.
-   - Use visualizations and statistical analysis to support conclusions.
-
-### 9. Project Review
-   - Assess the outcomes and the project's success.
-   - Document lessons learned and areas for future improvement.
+1. **Preparation**: Define objectives, tools for the analysis, and identify key stakeholders such as policymakers, healthcare providers, and social services organizations.
+2. **Data Collection**: Retrieve datasets from specified sources, clean data to handle missing values, standardize formats, and merge datasets using common identifiers.
+3. **Exploratory Data Analysis (EDA)**: Analyze trends in demographic, job, and health characteristics, visualize distributions, and identify patterns and anomalies in the data.
+4. **Correlation Analysis**: Study relationships between variables such as employment characteristics and food security indicators, and identify significant correlations between medical conditions and food security outcomes.
+5. **Barrier Identification**: Research obstacles to improving food security in different demographic groups and analyze the role of employment and health factors in contributing to these barriers.
+6. **Strategies Proposal**: Suggest solutions to address key barriers identified and prioritize strategies for policy interventions and social programs.
+7. **Impact Assessment**: Evaluate the effectiveness of proposed solutions using the data and estimate the potential benefits of targeted interventions for food security improvement.
+8. **Reporting**: Compile findings, present recommendations, and use visualizations and statistical analysis to support conclusions.
+9. **Project Review**: Assess the outcomes and the project's success, document lessons learned, and highlight areas for future improvement.
