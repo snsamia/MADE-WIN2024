@@ -1,0 +1,48 @@
+// Creating an automated data pipeline for Flughafens (AirportsData)
+pipeline FlughafensDataPipeline {
+
+// To fetch the CSV file of FlughafensData
+    block FlughafensDataExtractor oftype HttpExtractor {
+        url: "https://opendata.rhein-kreis-neuss.de/api/explore/v2.1/catalog/datasets/rhein-kreis-neuss-flughafen-weltweit/exports/csv?lang=en&timezone=Europe%2FBerlin&use_labels=true&delimiter=%3B";
+        
+    }
+// To interpret the File as a Text File
+    block FlughafensDataTextFileInterpreter oftype TextFileInterpreter { }
+
+// To interpret CSV input and output as a Sheet
+    block FlughafensDataCSVInterpreter oftype CSVInterpreter {
+        delimiter: ";";  // Ensure this is correct and supported
+    }
+
+
+// To interpret a Sheet as a Table, by removing the columns: Zeitzone, DST, Zeitzonen-Datenbank, geo_punkt
+    block FlughafensDataTableInterpreter oftype TableInterpreter {
+        header: true;
+        columns: [
+            "Lfd. Nummer" oftype integer,
+            "Name des Flughafens" oftype text,
+            "Ort" oftype text,
+            "Land" oftype text,
+            "IATA" oftype text,
+            "ICAO" oftype text,
+            "Latitude" oftype decimal,
+            "Longitude" oftype decimal,
+            "Altitude" oftype integer
+            // The following columns are intentionally removed: "Zeitzone", "DST", "Zeitzonen-Datenbank", "geo_punkt"
+        ];
+    }
+
+// To generate the SQLite Database called “airports.sqlite”, in the table “airports”
+    block FlughafensDataLoader oftype SQLiteLoader {
+        table: "airports";
+        file: "airports.sqlite";
+    }
+
+    FlughafensDataExtractor -> FlughafensDataTextFileInterpreter;
+
+    FlughafensDataTextFileInterpreter
+    -> FlughafensDataCSVInterpreter
+    -> FlughafensDataTableInterpreter 
+    -> FlughafensDataLoader;
+    
+}
