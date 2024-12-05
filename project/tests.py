@@ -18,7 +18,7 @@ class TestDataPipeline(unittest.TestCase):
 
         # Explicitly use Python executable
         result = subprocess.run(
-            ["C:/Users/Asus/AppData/Local/Programs/Python/Python311/python.exe", pipeline_path],
+            ["python", pipeline_path],
             capture_output=True,
             text=True
         )
@@ -78,4 +78,5 @@ class TestDataPipeline(unittest.TestCase):
 if __name__ == '__main__':
     import sys
     unittest.main(argv=['first-arg-is-ignored'], exit=False)
+    print("All tests passed.")
 
