@@ -18,7 +18,8 @@ class TestDataPipeline(unittest.TestCase):
 
         # Explicitly use Python executable
         result = subprocess.run(
-            ["python", pipeline_path],
+            ["C:/Users/Asus/AppData/Local/Programs/Python/Python311/python.exe", pipeline_path],
+            
             capture_output=True,
             text=True
         )
