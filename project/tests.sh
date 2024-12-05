@@ -1,4 +1,3 @@
 #!/bin/bash
 echo "Running tests..."
-
-python3 /project/tests.py
+C:/Users/Asus/AppData/Local/Programs/Python/Python311/python.exe tests.py

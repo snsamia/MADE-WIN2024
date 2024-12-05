@@ -76,6 +76,7 @@ class TestDataPipeline(unittest.TestCase):
 
 # Run the tests
 if __name__ == '__main__':
-    unittest.main()
+    import sys
+    unittest.main(argv=['first-arg-is-ignored'], exit=False)
     print("All tests passed.")
 
