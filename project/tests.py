@@ -8,32 +8,32 @@ class TestDataPipeline(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        """Run the main function to execute the data pipeline."""
+        
         main()
 
     def test_csv_file_exists(self):
-        """Test if the CSV output file exists."""
+        
         self.assertTrue(
             os.path.isfile('./data/merged_dataset.csv'),
             "CSV output file does not exist."
         )
 
     def test_sqlite_file_exists(self):
-        """Test if the SQLite database file exists."""
+        
         self.assertTrue(
             os.path.isfile('./data/merged_dataset.db'),
             "SQLite database file does not exist."
         )
 
     def test_csv_file_content(self):
-        """Test if the CSV file has data."""
+        
         csv_path = './data/merged_dataset.csv'
         df = pd.read_csv(csv_path)
         self.assertFalse(df.empty, "CSV file is empty.")
         self.assertGreater(len(df), 0, "CSV file has no data rows.")
 
     def test_sqlite_file_content(self):
-        """Test if the SQLite database table has data."""
+    
         db_path = './data/merged_dataset.db'
         conn = sqlite3.connect(db_path)
         query = "SELECT COUNT(*) FROM merged_data"
@@ -44,7 +44,7 @@ class TestDataPipeline(unittest.TestCase):
         self.assertGreater(count, 0, "SQLite database table 'merged_data' is empty.")
 
     def test_merged_columns(self):
-        """Test if the merged dataset contains expected columns."""
+        
         csv_path = './data/merged_dataset.csv'
         df = pd.read_csv(csv_path)
         expected_columns = [
