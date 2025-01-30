@@ -2,6 +2,8 @@
 # **Data-Driven Analysis of Employment Conditions and Food Security in the United States**
 
 <img src="https://raw.githubusercontent.com/snsamia/MADE-WIN2024/main/images/flag.jpg" width="800" height="466">
+---
+
 ## **Table of Contents**
 - [Introduction](#introduction)
 - [Data Sources](#data-sources)
