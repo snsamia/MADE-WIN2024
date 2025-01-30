@@ -43,7 +43,7 @@ The **ETL (Extract, Transform, Load) pipeline** ensures data integrity and usabi
 4. **Storage & Export:** The processed data was stored in an **SQLite database** and exported as **CSV**.
 
 ### **ETL Pipeline Workflow**
-<img src="https://github.com/snsamia/MADE-WIN2024/blob/main/images/pipeline.png" width="800" height="466">
+<img src="https://github.com/snsamia/MADE-WIN2024/blob/main/images/pipeline.png" width="1000" height="466">
 
 ---
 
