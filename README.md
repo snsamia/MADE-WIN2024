@@ -1,18 +1,79 @@
 # Methods of Advanced Data Engineering 
-# Jayvee Exercises (Exercise Badges)
-![](https://byob.yarr.is/snsamia/MADE-WIN2024/score_ex1) ![](https://byob.yarr.is/snsamia/MADE-WIN2024/score_ex2) ![](https://byob.yarr.is/snsamia/MADE-WIN2024/score_ex3) ![](https://byob.yarr.is/snsamia/MADE-WIN2024/score_ex4) ![](https://byob.yarr.is/snsamia/MADE-WIN2024/score_ex5)
+# **Data-Driven Analysis of Employment Conditions and Food Security in the United States**
 
-This template project provides some structure for your open data project in the MADE module at FAU.
-This repository contains (a) a data science project that is developed by the student over the course of the semester, and (b) the exercises that are submitted over the course of the semester.
+![USA Food Insecurity](images/usa.png)
 
-To get started, please follow these steps:
-1. Create your own fork of this repository. Feel free to rename the repository right after creation, before you let the teaching instructors know your repository URL. **Do not rename the repository during the semester**.
+## **Table of Contents**
+- [Introduction](#introduction)
+- [Data Sources](#data-sources)
+- [ETL Pipeline](#etl-pipeline)
+- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+- [Findings](#findings)
+- [Conclusion & Future Work](#conclusion--future-work)
+- [References](#references)
 
-## Project Work
-Your data engineering project will run alongside lectures during the semester. We will ask you to regularly submit project work as milestones, so you can reasonably pace your work. All project work submissions **must** be placed in the `project` folder.
+---
 
-### Exporting a Jupyter Notebook
-Jupyter Notebooks can be exported using `nbconvert` (`pip install nbconvert`). For example, to export the example notebook to HTML: `jupyter nbconvert --to html examples/final-report-example.ipynb --embed-images --output final-report.html`
+## **Introduction**
+Food insecurity remains a critical issue in the United States, impacting millions of households annually. Employment conditions, including **wages, job type, working hours, and job benefits**, directly influence a household’s ability to access nutritious food consistently. 
+
+This project explores the **relationship between employment metrics and food security indicators** using **2022 data** from the **Medical Expenditure Panel Survey (MEPS)**. The study aims to identify trends and correlations that can inform policy decisions.
+
+---
+
+## **Data Sources**
+The analysis integrates two primary datasets:
+
+1. **Job and Employment Conditions Dataset (HC-237, MEPS 2022) [1]**  
+   This dataset provides employment-related details, including **job type, weekly hours worked, gross pay, daily wages, and employer-provided insurance.** Structured in a tabular format, each row corresponds to an individual respondent, while columns represent employment attributes.
+
+2. **Food Security Dataset (HC-240, MEPS 2022) [2]**  
+   This dataset includes household-level insights into food security, covering **affordability concerns, meal skipping, and household food stability.** The dataset captures information on whether individuals experienced food shortages or had to skip meals due to financial constraints.
+
+Both datasets were merged using **dwelling\_unit\_id** as the common identifier.
+
+---
+
+## **ETL Pipeline**
+The **ETL (Extract, Transform, Load) pipeline** ensures data integrity and usability. The workflow consists of:
+
+1. **Data Ingestion:** Datasets were downloaded from **AHRQ MEPS**.
+2. **Preprocessing:** Data cleaning, missing value handling, and standardization.
+3. **Data Merging:** Employment and food security datasets were merged.
+4. **Storage & Export:** The processed data was stored in an **SQLite database** and exported as **CSV**.
+
+### **ETL Pipeline Workflow**
+![ETL Pipeline](images/etl.png)
+
+---
+
+## **Exploratory Data Analysis (EDA)**
+EDA was performed to understand the **distribution of employment metrics and their relationship with food security**.
+
+- **Income Distribution:** A histogram of gross pay reveals a **significant income disparity** among respondents.
+- **Work Hours:** Weekly working hours vary, with most individuals working **40 hours per week**.
+- **Food Security Metrics:** Frequency distributions illustrate **concerns about food shortages and meal skipping**.
+- **Correlation Heatmap:** Examines statistical relationships between income, employment, and food security.
+
+### **Sample Correlation Heatmap**
+![Correlation Heatmap](images/7.png)
+
+---
+
+## **Findings**
+### **Key Insights**
+- **Higher gross pay significantly reduces food insecurity.**  
+  Individuals with **higher wages** are less likely to worry about food shortages or skip meals.
+- **Lower working hours correlate with greater food insecurity.**  
+  Those who work **fewer hours per week** tend to experience **greater food insecurity**.
+- **Food security indicators (e.g., meal skipping and food worries) show strong negative correlations with income levels.**
+
+---
+
+## **Conclusion & Future Work**
+This study demonstrates a clear link between **employment stability and food security**. The findings emphasize the role of **wages, job benefits, and working hours** in mitigating food insecurity. These insights can help **policymakers design targeted interventions** to support vulnerable households.
+
+### **Limitations & Future
 
 
 ## Exercises
