@@ -88,10 +88,10 @@ Despite the valuable insights, there are **several limitations** in this analysi
 ---
 
 ## **References**
-[1] Medical Expenditure Panel Survey (MEPS) - HC-237: Job and Employment Conditions Dataset. 
-[2] Medical Expenditure Panel Survey (MEPS) - HC-240: Food Security Dataset.  
+ 
 
-
+[1] Medical Expenditure Panel Survey (MEPS) - HC-237: Job and Employment Conditions Dataset. [URL]  
+[2] Medical Expenditure Panel Survey (MEPS) - HC-240: Food Security Dataset. [URL]  
 
 
 
