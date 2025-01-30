@@ -42,7 +42,7 @@ The **ETL (Extract, Transform, Load) pipeline** ensures data integrity and usabi
 4. **Storage & Export:** The processed data was stored in an **SQLite database** and exported as **CSV**.
 
 ### **ETL Pipeline Workflow**
-![ETL Pipeline](images/etl.png)
+<img src="https://github.com/snsamia/MADE-WIN2024/blob/main/images/pipeline.png" width="800" height="466">
 
 ---
 
@@ -72,7 +72,32 @@ EDA was performed to understand the **distribution of employment metrics and the
 ## **Conclusion & Future Work**
 This study demonstrates a clear link between **employment stability and food security**. The findings emphasize the role of **wages, job benefits, and working hours** in mitigating food insecurity. These insights can help **policymakers design targeted interventions** to support vulnerable households.
 
-### **Limitations & Future
+### **Limitations**
+Despite the valuable insights, there are **several limitations** in this analysis:
+- **Data Completeness:** Some missing values were dropped, which might introduce bias in the final dataset.
+- **Static Data:** The dataset covers only 2022 and does not reflect **real-time economic fluctuations** such as inflation or policy changes.
+- **Self-Reported Data:** Responses may be influenced by **subjective biases** and **errors in data collection**.
+
+### **Future Enhancements**
+- **Predictive Modeling:** Implementing **machine learning models** to forecast food insecurity trends based on employment changes.
+- **Real-Time Data Integration:** Incorporating live employment and economic datasets to **enhance analytical accuracy**.
+- **Policy Evaluation:** Assessing the effectiveness of **government aid programs** in reducing food insecurity.
+
+---
+
+## **References**
+[1] Medical Expenditure Panel Survey (MEPS) - HC-237: Job and Employment Conditions Dataset. [URL]  
+[2] Medical Expenditure Panel Survey (MEPS) - HC-240: Food Security Dataset. [URL]  
+[3] USDA Economic Research Service - Food Security Statistics. [URL]  
+[4] U.S. Bureau of Labor Statistics - Employment Data 2022-2024. [URL]  
+
+---
+
+
+---
+
+### ✅ **Final Notes**
+This Markdown file is **fully structured and ready to use** for any **research or data analysis project** related to **employment and food security**. 🚀  
 
 
 ## Exercises
