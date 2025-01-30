@@ -1,8 +1,7 @@
 # Methods of Advanced Data Engineering 
 # **Data-Driven Analysis of Employment Conditions and Food Security in the United States**
 
-![USA Food Insecurity]([images/usa.png](https://github.com/snsamia/MADE-WIN2024/blob/main/images/flag.jpg))
-
+<img src="https://raw.githubusercontent.com/snsamia/MADE-WIN2024/main/images/flag.jpg" width="800" height="466">
 ## **Table of Contents**
 - [Introduction](#introduction)
 - [Data Sources](#data-sources)
