@@ -56,7 +56,8 @@ EDA was performed to understand the **distribution of employment metrics and the
 - **Correlation Heatmap:** Examines statistical relationships between income, employment, and food security.
 
 ### **Sample Correlation Heatmap**
-![Correlation Heatmap](images/7.png)
+
+<img src="https://github.com/snsamia/MADE-WIN2024/blob/main/images/correlation.png" width="800" height="466">
 
 ---
 
@@ -89,16 +90,10 @@ Despite the valuable insights, there are **several limitations** in this analysi
 ## **References**
 [1] Medical Expenditure Panel Survey (MEPS) - HC-237: Job and Employment Conditions Dataset. [URL]  
 [2] Medical Expenditure Panel Survey (MEPS) - HC-240: Food Security Dataset. [URL]  
-[3] USDA Economic Research Service - Food Security Statistics. [URL]  
-[4] U.S. Bureau of Labor Statistics - Employment Data 2022-2024. [URL]  
-
----
 
 
----
 
-### ✅ **Final Notes**
-This Markdown file is **fully structured and ready to use** for any **research or data analysis project** related to **employment and food security**. 🚀  
+
 
 
 ## Exercises
